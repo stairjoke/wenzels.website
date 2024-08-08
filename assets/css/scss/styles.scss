@@ -7,28 +7,61 @@
   src: url('assets/fonts/Cormorant_Garamond/CormorantGaramond-LightItalic.ttf') format('font/ttf');
 }
 
+:root {
+	--color-text: #222;
+	--color-text-dim: #555;
+	--color-text-accent: #c29;
+	
+	--color-page: #fff;
+	--color-lines: #ccc;
+	
+	@media (prefers-color-scheme: light){
+		--color-text: #222;
+		--color-text-dim: #555;
+		--color-text-accent: #c29;
+		
+		--color-page: #fff;
+		--color-lines: #ccc;
+	}
+	
+	@media (prefers-color-scheme: dark){
+		--color-text: #fff;
+		--color-text-dim: #aaa;
+		--color-text-accent: #c29;
+		
+		--color-page: #222;
+		--color-lines: #777;
+	}
+}
+
 body {
+	background: var(--color-page);
+	
 	font-family: "CormorantGaramont";
-	color: #222;
+	color: var(--color-text);
 	font-size: 20px;
 	@media (max-width: 640px) {
 		font-size: 16px;
 	}
 	
-	font-weight: 200;
-	font-style: italic;
-	line-height: 1.5;
-	
-	max-width: 12cm;
-	margin: 0 auto;
-	padding: 0 1em;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	& {
+		font-weight: 200;
+		font-style: italic;
+		line-height: 1.5;
+		
+		max-width: 12cm;
+		margin: 0 auto;
+		padding: 0 1em;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
 
 h1, p {
+	color: var(--color-text);
+	
 	margin: 0;
 	padding: 0;
 	margin-block: .5rlh;
@@ -44,26 +77,26 @@ p {
 }
 
 p.ps {
-	border-top: solid 1px #ccc;
+	border-top: solid 1px var(--color-lines);
 	margin-block-start: 2rlh;
 	padding-block: 1em;
 	
 	font-size: .8em;
-	color: #555;
+	color: var(--color-text-dim);
 }
 
 a {
 	&, &:link, &:active, &:visited {
 		text-decoration: none;
-		color: #c29;
+		color: var(--color-text-accent);
 	}
 	
 	&:hover, &:focus {
 		text-decoration: underline;
-		color: #c29;
+		color: var(--color-text-accent);
 	}
 	
 	&:focus-visible {
-		outline: solid 2px #c29;
+		outline: solid 2px var(--color-text-accent);
 	}
 }
