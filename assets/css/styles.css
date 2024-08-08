@@ -1,0 +1,64 @@
+/* Site Wide Styles */
+@font-face {
+  font-family: "CormorantGaramont";
+  font-style: italic;
+  font-weight: 200;
+  src: url("assets/fonts/Cormorant_Garamond/CormorantGaramond-LightItalic.ttf") format("font/ttf");
+}
+body {
+  font-family: "CormorantGaramont";
+  color: #222;
+  font-size: 20px;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 12cm;
+  margin: 0 auto;
+  padding: 0 1em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
+  margin-block: 0.5rlh;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+p.ps {
+  border-top: solid 1px #ccc;
+  margin-block-start: 2rlh;
+  padding-block: 1em;
+  font-size: 0.8em;
+  color: #555;
+}
+
+a, a:link, a:active, a:visited {
+  text-decoration: none;
+  color: #c29;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+  color: #c29;
+}
+a:focus-visible {
+  outline: solid 2px #c29;
+}
+
+/*# sourceMappingURL=styles.css.map */
